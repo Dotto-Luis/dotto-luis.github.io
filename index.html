@@ -3,79 +3,330 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luis Dotto – Intelligent Capital Architecture</title>
-  <meta name="description" content="Luis Dotto – Executive Finance & Data Strategist. Intelligent Capital Architecture connecting finance, data, and strategy under the MSCI framework." />
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="icon" href="public/favicon.ico" />
-  <link rel="manifest" href="public/manifest.json" />
-</head>
+  <title>Luis Dotto | Executive Finance & Data Strategist</title>
+  <style>
+    /* === THEME COLORS (from base_color.json) === */
+    :root {
+      --color-primary-500: #8DA399;
+      --color-secondary-500: #B8C4BB;
+      --color-accent-500: #D9CAB3;
+      --color-bg: #F7F5F2;
+      --color-surface: #FFFFFF;
+      --color-text-primary: #1F2937;
+      --color-text-secondary: #6B7280;
+    }
 
-<body class="bg-background text-text-primary font-inter">
-  <!-- Header -->
-  <header class="text-center py-12">
-    <h1 class="text-4xl md:text-6xl font-baskerville font-bold mb-3">Luis Dotto</h1>
-    <p class="text-lg md:text-xl text-primary">Executive Finance & Data Strategist</p>
-    <p class="text-text-secondary max-w-2xl mx-auto mt-4 leading-relaxed">
-      Intelligent Capital Architecture at the intersection of financial structure and data-driven insight.
-      Every project classified under the MSCI framework for clarity and discipline.
-    </p>
+    /* === GLOBAL STYLES === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-text-primary);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background-color: var(--color-surface);
+      padding: 1.2rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--color-secondary-500);
+    }
+
+    header h1 {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+    }
+
+    nav a:hover {
+      color: var(--color-primary-500);
+    }
+
+    /* === HERO SECTION === */
+    .hero {
+      text-align: center;
+      padding: 4rem 10%;
+      background-color: var(--color-surface);
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      background-color: purple;
+      border-radius: 50%;
+      margin: 0 auto 1.5rem;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero h3 {
+      font-size: 1.1rem;
+      color: var(--color-text-secondary);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1rem;
+      color: var(--color-text-secondary);
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 2.5rem;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-primary-500);
+    }
+
+    .hero-buttons {
+      margin-top: 2.5rem;
+    }
+
+    .btn {
+      padding: 0.8rem 1.6rem;
+      border-radius: 6px;
+      margin: 0 0.5rem;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--color-primary-500);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-primary-500);
+      opacity: 0.9;
+    }
+
+    .btn-secondary {
+      background-color: var(--color-secondary-500);
+      color: var(--color-text-primary);
+    }
+
+    .btn-secondary:hover {
+      opacity: 0.9;
+    }
+
+    /* === SECTORS GRID === */
+    section {
+      padding: 4rem 10%;
+      background-color: var(--color-bg);
+    }
+
+    h4 {
+      text-align: center;
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .sectors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .sector-card {
+      background-color: var(--color-surface);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .sector-card h5 {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      color: var(--color-primary-500);
+    }
+
+    .sector-card p {
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+    }
+
+    /* === INTELLIGENT CAPITAL ARCHITECTURE === */
+    .architecture {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--color-surface);
+      padding: 4rem 10%;
+    }
+
+    .architecture-text {
+      flex: 1 1 400px;
+    }
+
+    .architecture-text h4 {
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+
+    .architecture-text p {
+      color: var(--color-text-secondary);
+      margin-bottom: 1rem;
+    }
+
+    .architecture-text ul {
+      list-style-type: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .architecture-text li {
+      margin-bottom: 0.5rem;
+    }
+
+    .architecture-image {
+      flex: 1 1 300px;
+      height: 200px;
+      background-color: purple;
+      border-radius: 12px;
+    }
+
+    /* === FOOTER === */
+    footer {
+      background-color: var(--color-primary-500);
+      color: white;
+      padding: 2rem 10%;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+
+    footer .footer-links {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    footer a {
+      color: white;
+      opacity: 0.8;
+    }
+
+    footer a:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Luis Dotto</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Sectors</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Insights</a>
+      <a href="#">Contact</a>
+    </nav>
   </header>
 
-  <!-- Sectors Grid -->
-  <main class="max-w-6xl mx-auto px-6 py-16">
-    <h2 class="text-2xl md:text-3xl font-baskerville font-bold text-center mb-10">MSCI Sector Analysis</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-base border border-accent2 rounded-xl p-6 hover:shadow-card transition">
-        <h3 class="font-baskerville text-lg font-semibold mb-2">Financials</h3>
-        <p class="text-sm text-text-secondary mb-4">Banking, insurance & capital markets analysis.</p>
-        <a href="https://github.com/Dotto-Luis/Projects" target="_blank" class="text-hover font-medium hover:underline">View Projects →</a>
-      </div>
-
-      <div class="bg-base border border-accent2 rounded-xl p-6 hover:shadow-card transition">
-        <h3 class="font-baskerville text-lg font-semibold mb-2">Information Technology</h3>
-        <p class="text-sm text-text-secondary mb-4">Software, hardware & data-infrastructure projects.</p>
-        <a href="https://github.com/Dotto-Luis/Projects" target="_blank" class="text-hover font-medium hover:underline">View Projects →</a>
-      </div>
-
-      <div class="bg-base border border-accent2 rounded-xl p-6 hover:shadow-card transition">
-        <h3 class="font-baskerville text-lg font-semibold mb-2">Industrials</h3>
-        <p class="text-sm text-text-secondary mb-4">Construction, logistics & manufacturing analytics.</p>
-        <a href="https://github.com/Dotto-Luis/Projects" target="_blank" class="text-hover font-medium hover:underline">View Projects →</a>
-      </div>
-
-      <div class="bg-base border border-accent2 rounded-xl p-6 hover:shadow-card transition">
-        <h3 class="font-baskerville text-lg font-semibold mb-2">Energy</h3>
-        <p class="text-sm text-text-secondary mb-4">Oil, gas & renewable energy efficiency models.</p>
-        <a href="https://github.com/Dotto-Luis/Projects" target="_blank" class="text-hover font-medium hover:underline">View Projects →</a>
-      </div>
-
-      <div class="bg-base border border-accent2 rounded-xl p-6 hover:shadow-card transition">
-        <h3 class="font-baskerville text-lg font-semibold mb-2">Healthcare</h3>
-        <p class="text-sm text-text-secondary mb-4">Pharma & biotech capital allocations.</p>
-        <a href="https://github.com/Dotto-Luis/Projects" target="_blank" class="text-hover font-medium hover:underline">View Projects →</a>
-      </div>
-
-      <div class="bg-base border border-accent2 rounded-xl p-6 hover:shadow-card transition">
-        <h3 class="font-baskerville text-lg font-semibold mb-2">Real Estate</h3>
-        <p class="text-sm text-text-secondary mb-4">REIT structures & property development models.</p>
-        <a href="https://github.com/Dotto-Luis/Projects" target="_blank" class="text-hover font-medium hover:underline">View Projects →</a>
-      </div>
+  <section class="hero">
+    <div class="profile-pic"></div>
+    <h2>Luis Dotto</h2>
+    <h3>Executive Finance & Data Strategist</h3>
+    <p>Intelligent Capital Architecture at the intersection of analytical rigor and strategic vision. Institutional-quality thinking applied across MSCI sectors, where methodology meets opportunity and structure creates sustainable value.</p>
+    <div class="hero-stats">
+      <div class="stat"><strong>15+</strong>Years Experience</div>
+      <div class="stat"><strong>$2.8B</strong>Assets Analyzed</div>
+      <div class="stat"><strong>11</strong>MSCI Sectors</div>
     </div>
-  </main>
-
-  <!-- About Section -->
-  <section class="max-w-5xl mx-auto px-6 py-16 text-center">
-    <h2 class="text-2xl md:text-3xl font-baskerville font-bold mb-6">Methodology & Philosophy</h2>
-    <p class="text-text-secondary leading-relaxed max-w-3xl mx-auto">
-      My approach to finance is architectural — a blend of structural rigor and data-driven creativity. 
-      Each project is analyzed through the MSCI classification lens, ensuring clarity of sector exposure and strategic focus.
-    </p>
+    <div class="hero-buttons">
+      <button class="btn btn-primary">Explore Sectors</button>
+      <button class="btn btn-secondary">View Portfolio</button>
+    </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-text-primary text-white py-8 text-center">
-    <p class="font-baskerville text-lg mb-2">Luis Dotto</p>
-    <p class="text-gray-300 text-sm">© 2025 Luis Dotto. All Rights Reserved.</p>
+  <section>
+    <h4>MSCI Sector Analysis</h4>
+    <p style="text-align:center;color:var(--color-text-secondary);max-width:700px;margin:auto;">
+      Navigate through comprehensive sector analysis using the globally recognized MSCI framework. Each sector represents deep analytical insights and strategic opportunities.
+    </p>
+
+    <div class="sectors-grid">
+      <div class="sector-card"><h5>Energy</h5><p>Oil, gas & renewable energy analysis</p></div>
+      <div class="sector-card"><h5>Materials</h5><p>Metals, mining & chemical sectors</p></div>
+      <div class="sector-card"><h5>Industrials</h5><p>Manufacturing & infrastructure</p></div>
+      <div class="sector-card"><h5>Consumer Discretionary</h5><p>Retail, automotive & luxury goods</p></div>
+      <div class="sector-card"><h5>Consumer Staples</h5><p>Food, beverages & household products</p></div>
+      <div class="sector-card"><h5>Health Care</h5><p>Pharmaceuticals & medical devices</p></div>
+      <div class="sector-card"><h5>Financials</h5><p>Banking, insurance & capital markets</p></div>
+      <div class="sector-card"><h5>Information Technology</h5><p>Software, hardware & semiconductors</p></div>
+      <div class="sector-card"><h5>Communication Services</h5><p>Telecom, media & entertainment</p></div>
+      <div class="sector-card"><h5>Utilities</h5><p>Electric, gas & water utilities</p></div>
+      <div class="sector-card"><h5>Real Estate</h5><p>REITs & property development</p></div>
+    </div>
+  </section>
+
+  <section class="architecture">
+    <div class="architecture-text">
+      <h4>Intelligent Capital Architecture</h4>
+      <p>Where traditional finance meets modern data science. My approach transcends typical analysis by organizing all work through the globally recognized MSCI framework, creating a unique intersection of personal expertise and institutional methodology.</p>
+      <ul>
+        <li><strong>Structure Creates Clarity</strong> — Systematic frameworks reveal hidden patterns and opportunities.</li>
+        <li><strong>Data Reveals Opportunity</strong> — Quantified insights drive strategic decision-making.</li>
+        <li><strong>Methodology Enables Consistency</strong> — Repeatable processes deliver sustainable results.</li>
+      </ul>
+      <button class="btn btn-primary">Learn More About My Approach</button>
+    </div>
+    <div class="architecture-image"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 Luis Dotto. All Rights Reserved.</p>
+    <div class="footer-links">
+      <p>Executive Finance & Data Strategist specializing in MSCI sector analysis and intelligent capital architecture.</p>
+      <div>
+        <a href="#">LinkedIn</a> |
+        <a href="#">Email</a>
+      </div>
+    </div>
   </footer>
+
 </body>
 </html>
