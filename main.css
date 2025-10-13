@@ -61,11 +61,12 @@ nav a:hover {
 }
 
 .profile-pic {
-  width: 120px;
-  height: 120px;
-  background-color: purple; /* Placeholder */
-  border-radius: 50%;
-  margin: 0 auto 1.5rem;
+  flex: 1 1 300px;
+  height: 200px;
+  background-image: url("assets/images/boat.jpeg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
 }
 
 .hero h2 {
@@ -213,7 +214,9 @@ h4 {
 .architecture-image {
   flex: 1 1 300px;
   height: 200px;
-  background-color: purple; /* Placeholder */
+  background-image: url("assets/images/boat2.png");
+  background-size: cover;
+  background-position: center;
   border-radius: 12px;
 }
 
