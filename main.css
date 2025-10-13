@@ -39,7 +39,7 @@ header {
 }
 
 .logo img {
-  height: 26px;        /* Ajustá este valor según se vea */
+  height: 50px;        /* Ajustá este valor según se vea */
   width: auto;
   display: block;
   object-fit: contain;
