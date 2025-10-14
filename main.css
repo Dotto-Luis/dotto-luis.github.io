@@ -39,11 +39,16 @@ header {
 }
 
 .logo img {
-  height: 50px;        /* Ajustá este valor según se vea */
+  height: 32px;
   width: auto;
   display: block;
   object-fit: contain;
-  margin-top: -4px;    /* Opcional: corrige la alineación vertical */
+  margin-top: -2px;
+  transition: transform 0.2s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.02); 
 }
 
 header h1 {
@@ -69,12 +74,15 @@ nav a:hover {
 }
 
 .profile-pic {
-  flex: 1 1 300px;
-  height: 200px;
+  width: 120px;              
+  height: 120px;
   background-image: url("assets/images/boat.jpeg");
-  background-size: cover;
+  background-size: cover;       
   background-position: center;
-  border-radius: 12px;
+  border-radius: 50%;          
+  margin: 0 auto 1.5rem;        
+  overflow: hidden;             
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
 }
 
 .hero h2 {
@@ -223,9 +231,12 @@ h4 {
   flex: 1 1 300px;
   height: 200px;
   background-image: url("assets/images/boat2.png");
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
 }
 
 /* === FOOTER === */
