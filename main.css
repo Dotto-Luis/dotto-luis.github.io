@@ -228,16 +228,16 @@ h4 {
 }
 
 .architecture-image {
-  flex: 1 1 300px;
-  height: 260px;
+  flex: 1 1 420px; 
+  height: 320px; 
   background-image: url("assets/images/boat2.png");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center;
+  background-position: center bottom;
   background-color: #F7F5F2;
   border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.08);
   overflow: hidden;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
 }
 
 /* === FOOTER === */
