@@ -76,7 +76,7 @@ nav a:hover {
 .profile-pic {
   width: 120px;              
   height: 120px;
-  background-image: url("assets/images/boat.jpeg");
+  background-image: url("assets/images/boat_avatar.png");
   background-size: cover;       
   background-position: center;
   border-radius: 50%;          
