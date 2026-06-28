@@ -1,30 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-mode="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luis Dotto | Applied AI Engineer</title>
   <meta name="description" content="Luis Dotto — Applied AI Engineer. ML pipelines, LLM evaluation, and data-driven solutions organized across GICS sectors. Python, DuckDB, SQL, FastAPI.">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- External CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
+
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-mode', saved);
+    })();
+  </script>
 </head>
 <body>
 
   <header>
-    <div class="logo">
-      <img src="assets/images/signature.png" alt="Luis Dotto Signature">
+    <div class="logo">Luis Dotto</div>
+    <div class="nav-right">
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#sectors">Sectors</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle dark mode">☾</button>
     </div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#sectors">Sectors</a>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
   </header>
 
   <section class="hero" id="home">
@@ -43,10 +48,10 @@
     </div>
   </section>
 
-  <section id="sectors">
+  <section id="sectors" class="alt">
     <h4 class="fade-in">ML Projects by GICS Sector</h4>
-    <p class="fade-in" style="text-align:center;color:var(--color-text-secondary);max-width:700px;margin:auto;">
-      Projects organized using the Global Industry Classification Standard (GICS) — the same framework used by MSCI and S&P to classify industries worldwide. Each sector contains end-to-end ML solutions applied to real domain problems.
+    <p class="section-desc fade-in">
+      Projects organized using the Global Industry Classification Standard (GICS) — the same framework used by MSCI and S&P worldwide. Each sector contains end-to-end ML solutions applied to real domain problems.
     </p>
 
     <div class="sectors-grid">
@@ -77,11 +82,9 @@
     </div>
   </section>
 
-  <section id="projects" style="background-color: var(--color-surface);">
+  <section id="projects">
     <h4 class="fade-in">Featured Projects</h4>
-    <p class="fade-in" style="text-align:center;color:var(--color-text-secondary);max-width:700px;margin:auto;">
-      End-to-end ML projects with clean code, tests, and documentation.
-    </p>
+    <p class="section-desc fade-in">End-to-end ML projects with clean code, tests, and documentation.</p>
 
     <div class="project-list">
       <div class="project-card-featured fade-in">
@@ -90,38 +93,56 @@
           <h5>Ecommerce Performance Insights</h5>
           <p>ELT pipeline analyzing 100k orders from Olist (Brazil, 2016–2018). DuckDB + Python + SQL to extract KPIs on revenue and delivery performance across categories and states.</p>
           <p class="project-stack">Python · DuckDB · SQL · pandas · pytest</p>
-          <a href="https://github.com/Dotto-Luis/Projects/tree/main/Finance/Ecommerce-Performance-Insights" target="_blank" class="btn btn-primary" style="font-size:0.85rem; padding: 0.5rem 1rem;">View on GitHub →</a>
+          <a href="https://github.com/Dotto-Luis/Projects/tree/main/Finance/Ecommerce-Performance-Insights" target="_blank" class="btn btn-primary">View on GitHub →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="architecture" id="about">
-    <div class="architecture-text fade-in">
-      <h4>Why GICS?</h4>
-      <p>Most ML portfolios are a random collection of Kaggle notebooks. Mine is organized by industry sector — the same classification system used by institutional investors worldwide.</p>
-      <p>This structure reflects how I think: domain context matters. A credit risk model is fundamentally different from a sentiment classifier, even if both use gradient boosting.</p>
-      <ul>
+  <section id="about" class="alt">
+    <div class="about-text">
+      <div class="section-label fade-in">About</div>
+      <h4 class="fade-in">Why GICS?</h4>
+      <p class="fade-in">Most ML portfolios are a random collection of Kaggle notebooks. Mine is organized by industry sector — the same classification system used by institutional investors worldwide.</p>
+      <p class="fade-in">This structure reflects how I think: domain context matters. A credit risk model is fundamentally different from a sentiment classifier, even if both use gradient boosting.</p>
+      <ul class="fade-in">
         <li><strong>End-to-end by default</strong> — every project includes data pipeline, model, tests, and documentation.</li>
         <li><strong>LLM evaluation background</strong> — 2 years assessing model quality at Scale AI, building intuition for what makes AI outputs reliable.</li>
         <li><strong>Production mindset</strong> — FastAPI, Docker, deployment, not just notebooks.</li>
       </ul>
-      <a href="https://github.com/Dotto-Luis" target="_blank" class="btn btn-primary">Explore on GitHub</a>
+      <div class="fade-in" style="margin-top: 2rem;">
+        <a href="https://github.com/Dotto-Luis" target="_blank" class="btn btn-primary">Explore on GitHub</a>
+      </div>
     </div>
   </section>
 
   <footer id="contact">
-    <p>© 2025 Luis Dotto. All Rights Reserved.</p>
+    <p>© 2026 Luis Dotto</p>
     <div class="footer-links">
-      <p>Applied AI Engineer · Python · LLMs · MLOps</p>
-      <div>
-        <a href="https://www.linkedin.com/in/luisdotto/" target="_blank">LinkedIn</a> |
-        <a href="mailto:ruisu100@proton.me">Email</a>
-      </div>
+      <a href="https://www.linkedin.com/in/luisdotto/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Dotto-Luis" target="_blank">GitHub</a>
+      <a href="mailto:ruisu100@proton.me">Email</a>
     </div>
   </footer>
 
   <script>
+    const toggle = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+
+    function applyTheme(mode) {
+      root.setAttribute('data-mode', mode);
+      toggle.textContent = mode === 'dark' ? '☀' : '☾';
+      localStorage.setItem('theme', mode);
+    }
+
+    const saved = localStorage.getItem('theme') || 'light';
+    applyTheme(saved);
+
+    toggle.addEventListener('click', () => {
+      const current = root.getAttribute('data-mode');
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
