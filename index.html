@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> | Executive Finance & Data Strategist</title>
+  <title>Luis Dotto | Applied AI Engineer</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,73 +18,102 @@
       <img src="assets/images/signature.png" alt="Luis Dotto Signature">
     </div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Sectors</a>
-      <a href="#">About</a>
-      <a href="#">Projects</a>
-      <a href="#">Insights</a>
-      <a href="#">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#sectors">Sectors</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero" id="home">
     <div class="profile-pic"></div>
     <h2>Luis Dotto</h2>
-    <h3>Executive Finance & Data Strategist</h3>
-    <p>Intelligent Capital Architecture at the intersection of analytical rigor and strategic vision. Institutional-quality thinking applied across MSCI sectors, where methodology meets opportunity and structure creates sustainable value.</p>
+    <h3>Applied AI Engineer</h3>
+    <p>Building intelligent systems at the intersection of machine learning and real-world industry problems. ML pipelines, LLM applications, and data-driven solutions organized across GICS sectors — because domain context is what turns models into products.</p>
     <div class="hero-stats">
-      <div class="stat"><strong>15+</strong>Years Experience</div>
-      <div class="stat"><strong>$2.8B</strong>Assets Analyzed</div>
-      <div class="stat"><strong>11</strong>MSCI Sectors</div>
+      <div class="stat"><strong>18+</strong>ML Projects</div>
+      <div class="stat"><strong>2 yrs</strong>LLM Evaluation</div>
+      <div class="stat"><strong>6</strong>GICS Sectors</div>
     </div>
     <div class="hero-buttons">
-      <button class="btn btn-primary">Explore Sectors</button>
-      <button class="btn btn-secondary">View Portfolio</button>
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="https://github.com/Dotto-Luis/Projects" target="_blank" class="btn btn-secondary">GitHub</a>
     </div>
   </section>
 
-  <section>
-    <h4>MSCI Sector Analysis</h4>
+  <section id="sectors">
+    <h4>ML Projects by GICS Sector</h4>
     <p style="text-align:center;color:var(--color-text-secondary);max-width:700px;margin:auto;">
-      Navigate through comprehensive sector analysis using the globally recognized MSCI framework. Each sector represents deep analytical insights and strategic opportunities.
+      Projects organized using the Global Industry Classification Standard (GICS) — the same framework used by MSCI and S&P to classify industries worldwide. Each sector contains end-to-end ML solutions applied to real domain problems.
     </p>
 
     <div class="sectors-grid">
-      <div class="sector-card"><h5>Energy</h5><p>Oil, gas & renewable energy analysis</p></div>
-      <div class="sector-card"><h5>Materials</h5><p>Metals, mining & chemical sectors</p></div>
-      <div class="sector-card"><h5>Industrials</h5><p>Manufacturing & infrastructure</p></div>
-      <div class="sector-card"><h5>Consumer Discretionary</h5><p>Retail, automotive & luxury goods</p></div>
-      <div class="sector-card"><h5>Consumer Staples</h5><p>Food, beverages & household products</p></div>
-      <div class="sector-card"><h5>Health Care</h5><p>Pharmaceuticals & medical devices</p></div>
-      <div class="sector-card"><h5>Financials</h5><p>Banking, insurance & capital markets</p></div>
-      <div class="sector-card"><h5>Information Technology</h5><p>Software, hardware & semiconductors</p></div>
-      <div class="sector-card"><h5>Communication Services</h5><p>Telecom, media & entertainment</p></div>
-      <div class="sector-card"><h5>Utilities</h5><p>Electric, gas & water utilities</p></div>
-      <div class="sector-card"><h5>Real Estate</h5><p>REITs & property development</p></div>
+      <div class="sector-card">
+        <h5>💰 Finance</h5>
+        <p>Credit risk, market analysis, e-commerce KPIs, fintech chatbot</p>
+      </div>
+      <div class="sector-card">
+        <h5>💻 Information Technology</h5>
+        <p>RAG chatbots, AI agents, computer vision, blockchain analytics</p>
+      </div>
+      <div class="sector-card">
+        <h5>🏢 Real Estate</h5>
+        <p>Property price prediction, regression modeling</p>
+      </div>
+      <div class="sector-card">
+        <h5>🎬 Communication Services</h5>
+        <p>Sentiment analysis, NLP classification</p>
+      </div>
+      <div class="sector-card">
+        <h5>🛍️ Consumer Discretionary</h5>
+        <p>Review rating models, social media NLP</p>
+      </div>
+      <div class="sector-card">
+        <h5>⚡ Utilities</h5>
+        <p>Water quality prediction, environmental ML</p>
+      </div>
     </div>
   </section>
 
-  <section class="architecture">
+  <section id="projects" style="background-color: var(--color-surface);">
+    <h4>Featured Projects</h4>
+    <p style="text-align:center;color:var(--color-text-secondary);max-width:700px;margin:auto;">
+      End-to-end ML projects with clean code, tests, and documentation.
+    </p>
+
+    <div class="sectors-grid" style="margin-top: 2rem;">
+      <div class="sector-card" style="text-align:left;">
+        <h5>📊 Ecommerce Performance Insights</h5>
+        <p style="margin-bottom: 0.8rem;">ELT pipeline analyzing 100k orders from Olist (Brazil, 2016–2018). Built with DuckDB, Python, and SQL to extract KPIs on revenue and delivery performance across categories and states.</p>
+        <p style="font-size:0.8rem; color:var(--color-primary-500); margin-bottom:0.8rem;">Python · DuckDB · SQL · pandas · pytest</p>
+        <a href="https://github.com/Dotto-Luis/Projects/tree/main/Finance/Ecommerce-Performance-Insights" target="_blank" class="btn btn-primary" style="font-size:0.85rem; padding: 0.5rem 1rem;">View on GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="architecture" id="about">
     <div class="architecture-text">
-      <h4>Intelligent Capital Architecture</h4>
-      <p>Where traditional finance meets modern data science. My approach transcends typical analysis by organizing all work through the globally recognized MSCI framework, creating a unique intersection of personal expertise and institutional methodology.</p>
+      <h4>Why GICS?</h4>
+      <p>Most ML portfolios are a random collection of Kaggle notebooks. Mine is organized by industry sector — the same classification system used by institutional investors worldwide.</p>
+      <p>This structure reflects how I think: domain context matters. A classification model for credit risk is fundamentally different from one for sentiment analysis, even if both use gradient boosting.</p>
       <ul>
-        <li><strong>Structure Creates Clarity</strong> — Systematic frameworks reveal hidden patterns and opportunities.</li>
-        <li><strong>Data Reveals Opportunity</strong> — Quantified insights drive strategic decision-making.</li>
-        <li><strong>Methodology Enables Consistency</strong> — Repeatable processes deliver sustainable results.</li>
+        <li><strong>End-to-end by default</strong> — every project includes data pipeline, model, tests, and documentation.</li>
+        <li><strong>LLM evaluation background</strong> — 2 years assessing model quality at Scale AI, building intuition for what makes AI outputs reliable.</li>
+        <li><strong>Production mindset</strong> — FastAPI, Docker, deployment, not just notebooks.</li>
       </ul>
-      <button class="btn btn-primary">Learn More About My Approach</button>
+      <a href="https://github.com/Dotto-Luis" target="_blank" class="btn btn-primary">Explore on GitHub</a>
     </div>
     <div class="architecture-image"></div>
   </section>
 
-  <footer>
+  <footer id="contact">
     <p>© 2025 Luis Dotto. All Rights Reserved.</p>
     <div class="footer-links">
-      <p>Executive Finance & Data Strategist specializing in MSCI sector analysis and intelligent capital architecture.</p>
+      <p>Applied AI Engineer · Python · LLMs · MLOps</p>
       <div>
-        <a href="#">LinkedIn</a> |
-        <a href="#">Email</a>
+        <a href="https://linkedin.com/in/luisdotto" target="_blank">LinkedIn</a> |
+        <a href="mailto:ruisu100@proton.me">Email</a>
       </div>
     </div>
   </footer>
