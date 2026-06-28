@@ -28,49 +28,49 @@
   </header>
 
   <section class="hero" id="home">
-    <div class="profile-pic"></div>
-    <h2>Luis Dotto</h2>
-    <h3>Applied AI Engineer</h3>
-    <p>ML Engineer and Data Scientist with experience at Scale AI, Anyone AI, and EY. I build end-to-end pipelines, evaluate LLM outputs, and apply machine learning to real industry problems — organized across GICS sectors because domain context is what turns models into products.</p>
-    <div class="hero-stats">
+    <div class="profile-pic fade-in"></div>
+    <h2 class="fade-in">Luis Dotto</h2>
+    <h3 class="fade-in">Applied AI Engineer</h3>
+    <p class="fade-in">ML Engineer and Data Scientist with experience at Scale AI, Anyone AI, and EY. I build end-to-end pipelines, evaluate LLM outputs, and apply machine learning to real industry problems — organized across GICS sectors because domain context is what turns models into products.</p>
+    <div class="hero-stats fade-in">
       <div class="stat"><strong>4+</strong><span>Years in ML/Data</span></div>
       <div class="stat"><strong>2 yrs</strong><span>LLM Evaluation</span></div>
       <div class="stat"><strong>6</strong><span>GICS Sectors</span></div>
     </div>
-    <div class="hero-buttons">
+    <div class="hero-buttons fade-in">
       <a href="#projects" class="btn btn-primary">View Projects</a>
       <a href="https://github.com/Dotto-Luis/Projects" target="_blank" class="btn btn-secondary">GitHub</a>
     </div>
   </section>
 
   <section id="sectors">
-    <h4>ML Projects by GICS Sector</h4>
-    <p style="text-align:center;color:var(--color-text-secondary);max-width:700px;margin:auto;">
+    <h4 class="fade-in">ML Projects by GICS Sector</h4>
+    <p class="fade-in" style="text-align:center;color:var(--color-text-secondary);max-width:700px;margin:auto;">
       Projects organized using the Global Industry Classification Standard (GICS) — the same framework used by MSCI and S&P to classify industries worldwide. Each sector contains end-to-end ML solutions applied to real domain problems.
     </p>
 
     <div class="sectors-grid">
-      <div class="sector-card">
+      <div class="sector-card fade-in" style="--delay: 0.05s">
         <h5>💰 Finance</h5>
         <p>Credit risk, market analysis, e-commerce KPIs, fintech chatbot</p>
       </div>
-      <div class="sector-card">
+      <div class="sector-card fade-in" style="--delay: 0.1s">
         <h5>💻 Information Technology</h5>
         <p>RAG chatbots, AI agents, computer vision, blockchain analytics</p>
       </div>
-      <div class="sector-card">
+      <div class="sector-card fade-in" style="--delay: 0.15s">
         <h5>🏢 Real Estate</h5>
         <p>Property price prediction, regression modeling</p>
       </div>
-      <div class="sector-card">
+      <div class="sector-card fade-in" style="--delay: 0.2s">
         <h5>🎬 Communication Services</h5>
         <p>Sentiment analysis, NLP classification</p>
       </div>
-      <div class="sector-card">
+      <div class="sector-card fade-in" style="--delay: 0.25s">
         <h5>🛍️ Consumer Discretionary</h5>
         <p>Review rating models, social media NLP</p>
       </div>
-      <div class="sector-card">
+      <div class="sector-card fade-in" style="--delay: 0.3s">
         <h5>⚡ Utilities</h5>
         <p>Water quality prediction, environmental ML</p>
       </div>
@@ -78,13 +78,13 @@
   </section>
 
   <section id="projects" style="background-color: var(--color-surface);">
-    <h4>Featured Projects</h4>
-    <p style="text-align:center;color:var(--color-text-secondary);max-width:700px;margin:auto;">
+    <h4 class="fade-in">Featured Projects</h4>
+    <p class="fade-in" style="text-align:center;color:var(--color-text-secondary);max-width:700px;margin:auto;">
       End-to-end ML projects with clean code, tests, and documentation.
     </p>
 
     <div class="project-list">
-      <div class="project-card-featured">
+      <div class="project-card-featured fade-in">
         <div class="project-sector-badge">Finance<br>GICS</div>
         <div class="project-body">
           <h5>Ecommerce Performance Insights</h5>
@@ -97,7 +97,7 @@
   </section>
 
   <section class="architecture" id="about">
-    <div class="architecture-text">
+    <div class="architecture-text fade-in">
       <h4>Why GICS?</h4>
       <p>Most ML portfolios are a random collection of Kaggle notebooks. Mine is organized by industry sector — the same classification system used by institutional investors worldwide.</p>
       <p>This structure reflects how I think: domain context matters. A credit risk model is fundamentally different from a sentiment classifier, even if both use gradient boosting.</p>
@@ -120,6 +120,19 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
