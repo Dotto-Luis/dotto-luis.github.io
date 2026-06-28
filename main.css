@@ -221,6 +221,14 @@ nav a:hover {
   border: 1px solid var(--btn-secondary-border);
 }
 
+.btn-linkedin {
+  background-color: #0A66C2;
+  color: #ffffff;
+  border: 1px solid #0A66C2;
+  display: inline-flex;
+  align-items: center;
+}
+
 /* === SECTIONS === */
 section {
   padding: 5rem 10%;
