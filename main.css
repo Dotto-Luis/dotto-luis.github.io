@@ -125,13 +125,18 @@ nav a:hover {
 }
 
 .hero h2 {
-  font-family: "Lora", Georgia, serif;
-  font-size: 3rem;
+  font-family: "Space Mono", monospace;
+  font-size: 3.8rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   margin-bottom: 0.5rem;
-  color: var(--text);
-  line-height: 1.2;
+  color: #aaaaaa;
+  line-height: 1.15;
+}
+
+[data-mode="dark"] .hero h2 {
+  color: #666666;
 }
 
 .hero h3 {
