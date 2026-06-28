@@ -193,6 +193,71 @@ h4 {
   color: var(--color-text-secondary);
 }
 
+.sector-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sector-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* === FEATURED PROJECT CARD === */
+.project-list {
+  margin-top: 2rem;
+}
+
+.project-card-featured {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-secondary-500);
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  max-width: 700px;
+  margin: 0 auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card-featured:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+.project-sector-badge {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-secondary-500);
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.75rem;
+  color: var(--color-primary-500);
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1.8;
+  flex-shrink: 0;
+}
+
+.project-body h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary-500);
+  margin-bottom: 0.4rem;
+}
+
+.project-body p {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.6rem;
+}
+
+.project-stack {
+  font-size: 0.8rem !important;
+  color: var(--color-primary-500) !important;
+  margin-bottom: 0.8rem !important;
+}
+
 /* === ARCHITECTURE SECTION === */
 .architecture {
   display: flex;
