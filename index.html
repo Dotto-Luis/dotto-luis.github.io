@@ -6,7 +6,7 @@
   <title>Luis Dotto | Applied AI Engineer</title>
   <meta name="description" content="Luis Dotto — Applied AI Engineer. ML pipelines, LLM evaluation, and data-driven solutions organized across GICS sectors. Python, DuckDB, SQL, FastAPI.">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
 
   <script>
@@ -18,11 +18,11 @@
 </head>
 <body>
 
+  <!-- NAV -->
   <header>
     <div class="logo">Luis Dotto</div>
     <div class="nav-right">
       <nav>
-        <a href="#home">Home</a>
         <a href="#sectors">Sectors</a>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
@@ -32,21 +32,39 @@
     </div>
   </header>
 
+  <!-- HERO -->
   <section class="hero" id="home">
     <div class="profile-pic fade-in"></div>
-    <h2 class="fade-in">Luis Dotto</h2>
-    <h3 class="fade-in">Applied AI Engineer</h3>
-    <p class="fade-in">ML Engineer and Data Scientist with experience at Scale AI, Anyone AI, and EY. I build end-to-end pipelines, evaluate LLM outputs, and apply machine learning to real industry problems — organized across GICS sectors because domain context is what turns models into products.</p>
+
+    <h1 class="hero-name fade-in">Luis Dotto</h1>
+    <p class="hero-title fade-in">Applied AI Engineer</p>
+
+    <p class="hero-bio fade-in">
+      ML Engineer and Data Scientist with experience at Scale AI, Anyone AI, and EY.
+      End-to-end pipelines, LLM evaluation, and machine learning applied to real industry problems
+      — organized across GICS sectors because domain context is what turns models into products.
+    </p>
+
     <div class="hero-stats fade-in">
-      <div class="stat"><strong>4+</strong><span>Years in ML/Data</span></div>
-      <div class="stat"><strong>2 yrs</strong><span>LLM Evaluation</span></div>
-      <div class="stat"><strong>6</strong><span>GICS Sectors</span></div>
+      <div class="stat">
+        <strong>4+</strong>
+        <span>Years ML/Data</span>
+      </div>
+      <div class="stat">
+        <strong>2 yrs</strong>
+        <span>LLM Evaluation</span>
+      </div>
+      <div class="stat">
+        <strong>6</strong>
+        <span>GICS Sectors</span>
+      </div>
     </div>
+
     <div class="hero-buttons fade-in">
       <a href="#projects" class="btn btn-primary">View Projects</a>
       <a href="https://github.com/Dotto-Luis/Projects" target="_blank" class="btn btn-secondary">GitHub</a>
-      <a href="https://www.linkedin.com/in/luisdotto/" target="_blank" class="btn btn-linkedin" aria-label="LinkedIn profile">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle; margin-right:6px;">
+      <a href="https://www.linkedin.com/in/luisdotto/" target="_blank" class="btn btn-linkedin">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
           <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
         </svg>
         LinkedIn
@@ -54,43 +72,47 @@
     </div>
   </section>
 
-  <section id="sectors" class="alt">
-    <h4 class="fade-in">ML Projects by GICS Sector</h4>
-    <p class="section-desc fade-in">
-      Projects organized using the Global Industry Classification Standard (GICS) — the same framework used by MSCI and S&P worldwide. Each sector contains end-to-end ML solutions applied to real domain problems.
+  <!-- SECTORS -->
+  <section class="section alt" id="sectors">
+    <p class="section-eyebrow fade-in">Portfolio structure</p>
+    <h2 class="section-headline fade-in">ML by GICS Sector</h2>
+    <p class="section-sub fade-in">
+      Projects organized using the Global Industry Classification Standard — the same framework used by MSCI and S&P worldwide. Domain context is not optional.
     </p>
 
     <div class="sectors-grid">
-      <div class="sector-card fade-in" style="--delay: 0.05s">
+      <div class="sector-card fade-in" style="--delay:0.05s">
         <h5>💰 Finance</h5>
         <p>Credit risk, market analysis, e-commerce KPIs, fintech chatbot</p>
       </div>
-      <div class="sector-card fade-in" style="--delay: 0.1s">
+      <div class="sector-card fade-in" style="--delay:0.1s">
         <h5>💻 Information Technology</h5>
         <p>RAG chatbots, AI agents, computer vision, blockchain analytics</p>
       </div>
-      <div class="sector-card fade-in" style="--delay: 0.15s">
+      <div class="sector-card fade-in" style="--delay:0.15s">
         <h5>🏢 Real Estate</h5>
         <p>Property price prediction, regression modeling</p>
       </div>
-      <div class="sector-card fade-in" style="--delay: 0.2s">
+      <div class="sector-card fade-in" style="--delay:0.2s">
         <h5>🎬 Communication Services</h5>
         <p>Sentiment analysis, NLP classification</p>
       </div>
-      <div class="sector-card fade-in" style="--delay: 0.25s">
+      <div class="sector-card fade-in" style="--delay:0.25s">
         <h5>🛍️ Consumer Discretionary</h5>
         <p>Review rating models, social media NLP</p>
       </div>
-      <div class="sector-card fade-in" style="--delay: 0.3s">
+      <div class="sector-card fade-in" style="--delay:0.3s">
         <h5>⚡ Utilities</h5>
         <p>Water quality prediction, environmental ML</p>
       </div>
     </div>
   </section>
 
-  <section id="projects">
-    <h4 class="fade-in">Featured Projects</h4>
-    <p class="section-desc fade-in">End-to-end ML projects with clean code, tests, and documentation.</p>
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <p class="section-eyebrow fade-in">Featured work</p>
+    <h2 class="section-headline fade-in">Projects</h2>
+    <p class="section-sub fade-in">End-to-end ML projects with clean code, tests, and documentation.</p>
 
     <div class="project-list">
       <div class="project-card-featured fade-in">
@@ -99,29 +121,34 @@
           <h5>Ecommerce Performance Insights</h5>
           <p>ELT pipeline analyzing 100k orders from Olist (Brazil, 2016–2018). DuckDB + Python + SQL to extract KPIs on revenue and delivery performance across categories and states.</p>
           <p class="project-stack">Python · DuckDB · SQL · pandas · pytest</p>
-          <a href="https://github.com/Dotto-Luis/Projects/tree/main/Finance/Ecommerce-Performance-Insights" target="_blank" class="btn btn-primary">View on GitHub →</a>
+          <a href="https://github.com/Dotto-Luis/Projects/tree/main/Finance/Ecommerce-Performance-Insights" target="_blank" class="btn btn-primary" style="font-size:0.82rem; padding:0.5rem 1.1rem;">View on GitHub →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="about" class="alt">
-    <div class="about-text">
-      <div class="section-label fade-in">About</div>
-      <h4 class="fade-in">Why GICS?</h4>
+  <!-- ABOUT -->
+  <section class="section alt" id="about">
+    <div class="about-wrap">
+      <p class="section-eyebrow fade-in">Philosophy</p>
+      <h2 class="section-headline fade-in">Why GICS?</h2>
+
       <p class="fade-in">Most ML portfolios are a random collection of Kaggle notebooks. Mine is organized by industry sector — the same classification system used by institutional investors worldwide.</p>
-      <p class="fade-in">This structure reflects how I think: domain context matters. A credit risk model is fundamentally different from a sentiment classifier, even if both use gradient boosting.</p>
-      <ul class="fade-in">
+      <p class="fade-in">Domain context matters. A credit risk model is fundamentally different from a sentiment classifier, even if both use gradient boosting.</p>
+
+      <ul class="about-list fade-in">
         <li><strong>End-to-end by default</strong> — every project includes data pipeline, model, tests, and documentation.</li>
         <li><strong>LLM evaluation background</strong> — 2 years assessing model quality at Scale AI, building intuition for what makes AI outputs reliable.</li>
-        <li><strong>Production mindset</strong> — FastAPI, Docker, deployment, not just notebooks.</li>
+        <li><strong>Production mindset</strong> — FastAPI, Docker, deployment. Not just notebooks.</li>
       </ul>
-      <div class="fade-in" style="margin-top: 2rem;">
+
+      <div class="fade-in">
         <a href="https://github.com/Dotto-Luis" target="_blank" class="btn btn-primary">Explore on GitHub</a>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer id="contact">
     <p>© 2026 Luis Dotto</p>
     <div class="footer-links">
@@ -133,7 +160,7 @@
 
   <script>
     const toggle = document.getElementById('theme-toggle');
-    const root = document.documentElement;
+    const root   = document.documentElement;
 
     function applyTheme(mode) {
       root.setAttribute('data-mode', mode);
@@ -141,22 +168,20 @@
       localStorage.setItem('theme', mode);
     }
 
-    const saved = localStorage.getItem('theme') || 'light';
-    applyTheme(saved);
+    applyTheme(localStorage.getItem('theme') || 'light');
 
     toggle.addEventListener('click', () => {
-      const current = root.getAttribute('data-mode');
-      applyTheme(current === 'dark' ? 'light' : 'dark');
+      applyTheme(root.getAttribute('data-mode') === 'dark' ? 'light' : 'dark');
     });
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.1 });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
