@@ -500,7 +500,7 @@ footer p {
   width: 0.55em;
   height: 0.85em;
   background: var(--text-light);
-  vertical-align: text-bottom;
+  vertical-align: middle;
   margin-left: 0.1em;
   animation: blink 1s step-end infinite;
 }
