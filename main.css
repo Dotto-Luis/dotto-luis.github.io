@@ -57,10 +57,10 @@ body {
 [data-mode="dark"] #stars-bg { display: block; }
 [data-mode="dark"] body { background: transparent; }
 [data-mode="dark"] .hero,
-[data-mode="dark"] .section { background: rgba(0,0,0,0.72); }
-[data-mode="dark"] .section.alt { background: rgba(20,20,24,0.78); }
-[data-mode="dark"] header { background: rgba(0,0,0,0.75); }
-[data-mode="dark"] footer { background: rgba(20,20,24,0.78); }
+[data-mode="dark"] .section { background: rgba(10,10,15,0.45); }
+[data-mode="dark"] .section.alt { background: rgba(17,24,39,0.45); }
+[data-mode="dark"] header { background: rgba(10,10,15,0.6); }
+[data-mode="dark"] footer { background: rgba(17,24,39,0.5); }
 
 a { text-decoration: none; color: inherit; }
 
