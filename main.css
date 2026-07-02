@@ -8,7 +8,8 @@
   --border:       #d2d2d7;
   --card-bg:      #ffffff;
   --card-shadow:  0 2px 20px rgba(0,0,0,0.08);
-  --btn-primary-bg:    #1d1d1f;
+  --accent:            #193747;
+  --btn-primary-bg:    #193747;
   --btn-primary-text:  #ffffff;
   --btn-secondary-bg:  transparent;
   --btn-secondary-border: #d2d2d7;
@@ -68,7 +69,12 @@ header {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text);
+  color: var(--accent);
+  transition: opacity 0.2s;
+}
+
+[data-mode="dark"] .logo {
+  color: #4a8fa8;
 }
 
 .nav-right {
@@ -85,7 +91,7 @@ nav a {
   transition: color 0.2s;
 }
 
-nav a:hover { color: var(--text); }
+nav a:hover { color: var(--accent); }
 
 #theme-toggle {
   background: none;
@@ -436,7 +442,7 @@ footer p {
   transition: color 0.2s;
 }
 
-.footer-links a:hover { color: var(--text); }
+.footer-links a:hover { color: var(--accent); }
 
 /* === SCROLL ANIMATIONS === */
 .fade-in {
