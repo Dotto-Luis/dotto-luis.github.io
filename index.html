@@ -18,6 +18,8 @@
 </head>
 <body>
 
+  <canvas id="stars-bg" aria-hidden="true"></canvas>
+
   <!-- NAV -->
   <header>
     <a href="#home" class="logo">
@@ -158,13 +160,37 @@
     const toggle = document.getElementById('theme-toggle');
     const root   = document.documentElement;
 
+    function drawStars() {
+      const canvas = document.getElementById('stars-bg');
+      canvas.width  = window.innerWidth;
+      canvas.height = window.innerHeight;
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = '#000000';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      const count = Math.floor((canvas.width * canvas.height) / 6000);
+      for (let i = 0; i < count; i++) {
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height;
+        const r = Math.random() * 1.1 + 0.2;
+        const o = Math.random() * 0.55 + 0.15;
+        ctx.beginPath();
+        ctx.arc(x, y, r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255,255,255,${o})`;
+        ctx.fill();
+      }
+    }
+
     function applyTheme(mode) {
       root.setAttribute('data-mode', mode);
       toggle.textContent = mode === 'dark' ? '☀' : '☾';
       localStorage.setItem('theme', mode);
+      if (mode === 'dark') drawStars();
     }
 
     applyTheme(localStorage.getItem('theme') || 'light');
+    window.addEventListener('resize', () => {
+      if (root.getAttribute('data-mode') === 'dark') drawStars();
+    });
 
     toggle.addEventListener('click', () => {
       applyTheme(root.getAttribute('data-mode') === 'dark' ? 'light' : 'dark');
